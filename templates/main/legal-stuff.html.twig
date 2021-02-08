@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mentions Légales{% endblock %}
+
+{% block body %}
+    <h2>Merci de faire attention aux petites lignes</h2>
+
+    <form>
+        <input type="button" value="Cliquez moi" onClick="Message()">
+    </form>
+    <script type="text/javascript">
+        function Message() {
+            var msg="Nous nous réservons le droit de vendre toutes vos informations";
+            console.log(msg)
+            alert(msg);
+        }
+    </script>
+
+    <script type="text/javascript" src="{{ asset('js/fonctions.js') }}"></script>
+
+{% endblock %}
+

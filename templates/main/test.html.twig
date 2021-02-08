@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% set nom = "Pierre" %}
+    {% set nomMaj = nom|upper %}
+    {{ nomMaj }}
+    {{ nomMaj|length }}
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+        <h1>Liste des choses à faire</h1>
+
+    <ul>
+        {% for wish in wishs %}
+
+           <li><a href="{{ path('wish_detail', {id:wish.id} )}}" title="détails de l'envie">{{ wish.title }}</a></li>
+           <div>{{ wish.category.name}}</div>
+        {% else %}
+            <div>Vous n'avez plus aucun souhait. Vous pouvez mourir</div>
+        {% endfor %}
+    </ul>
+
+
+
+
+{% endblock %}

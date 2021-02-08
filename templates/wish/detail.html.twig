@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+ {# affichage de l'id et stockage dans une variable #}
+ <!--<h1>recuperation de l'id {# {{ wish_id }} #}</h1>-->
+{#
+{% set identifiant= wish_id %}
+
+{{ identifiant }}
+#}
+
+    <h1>Détails de l'action à réaliser</h1>
+
+    <ul>
+        <li>Souhait :{{ wish_id.title }}</li>
+        <li>Identifiant :{{ wish_id.id }}</li>
+        <li>Auteur :{{ wish_id.author }}</li>
+        <li>Description :{{ wish_id.description }}</li>
+        <li>Catégorie :{{ wish_id.category.name }}</li>
+        <li>Date : {{ wish_id.dateCreated|date("Y-m-d") }}</li>
+    </ul>
+
+
+   {% set wish = wish_id %}
+
+
+ <ul>
+  {% for ligne in wish_id %}
+   <li>{{ ligne }}</li>
+  {% endfor %}
+ </ul>
+
+{% endblock %}
